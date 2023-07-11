@@ -15,7 +15,7 @@ class Solution:
                 maxLen +=1
         return s[start:start+maxLen]            
 
-
+assert Solution().LongestPalindromicSubstring("abccb") == "bccb"
 
 from collections import namedtuple
 TestEntry = namedtuple('TestEntry', 'array target')

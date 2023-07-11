@@ -27,5 +27,5 @@ class Solution(object):
                 num_idx_dict[v] = i  # 取到则返回，没有则添加
         return solution
 
-if __name__ == '__main__':
-    print(Solution().twoSum([2, 17, 7, 15], 9));
+assert Solution().twoSum([2, 17, 7, 15], 9) == [0,2]
+#print(Solution().twoSum([2, 17, 7, 15], 9));
