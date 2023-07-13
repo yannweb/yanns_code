@@ -24,15 +24,6 @@ class Solution:
 
 
 
-def number_of_linked_list( node: ListNode):
-
-    number_string = ''
-    cur = node
-    while cur:
-        number_string += str(cur.val)
-        cur = cur.next
-
-    return number_string[::-1]   # 把链表解析出来，原本是对象
 
 # from collections import namedtuple
 # TestEntry = namedtuple('TestEntry','array target')

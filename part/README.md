@@ -16,31 +16,23 @@ array/
 
 #### dict
 
-1. 获取字典的值
-2. 反写字典
+1. 列表写入字典处理
+2. 获取字典的值并判断
 
 
 
 比起直接取值，还可以处理空值的情况
 
 ~~python
-            index_of_dual = num_idx_dict.get(dual,None)
-            if index_of_dual is not None and index_of_dual != i:
-                solution = [i,index_of_dual]
-             # 对比 x=   num_idx_dict[dual]
-~~
-
-
-
-~~python
+        num_idx_dict = dict()
         for i,v in enumerate(nums):
-            #dual = target - v
-            #index_of_dual = num_idx_dict.get(dual,None)
-            if index_of_dual is not None and index_of_dual != i:
-            #   solution = [i,index_of_dual]
-            #    break
-            #else:
-                num_idx_dict[v] = i   # 需要返回index的时候用
+            dual = target - v
+            index_of_dual = num_idx_dict.get(dual,None)
+            if index_of_dual is not None and index_of_dual != i:  # dict 02
+                xx
+                break
+            else:
+                num_idx_dict[v] = i  # 取到则返回，没有则添加 # dict 01
 ~~
 
 
