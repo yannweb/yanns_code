@@ -12,8 +12,18 @@ class Solution:
         if int_reversed > 2147483648 -1 or int_reversed < -2147483648:
             return 0
         return int_reversed
+
+    def reverse1(self, x:int)->int:
+        res = 0
+        while x !=0:
+            res = res * 10 + x % 10
+            x //=10
+        if res > 0xffffffFF//2 or res < -0xffffffFF//2 :
+            return 0
+        return res
+            
                  
-assert Solution().reverse(120) == 21
+assert Solution().reverse1(2147483646) == 0
 
 
 from collections import namedtuple

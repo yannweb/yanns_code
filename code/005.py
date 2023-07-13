@@ -9,11 +9,11 @@ class Solution:
             even = s[i-maxLen:i+1]
             if i-maxLen-1 >= 0 and odd == odd[::-1]:    
                 start = i - maxLen -1
-                maxLen += 2
+                maxLen += 2  # math 03
             if i-maxLen >= 0 and even == even[::-1]:
                 start = i-maxLen
                 maxLen +=1
-        return s[start:start+maxLen]            
+        return s[start:start+maxLen]  # math 03           
 
 assert Solution().LongestPalindromicSubstring("abccb") == "bccb"
 
