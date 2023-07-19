@@ -19,7 +19,28 @@ class Solution(object):
     # Test cases
 
 
+    def romanToInt2(self, s:str) -> int:
+        mapping_table = {   
+                            'I': 1,
+                            'V': 5,
+                            'X': 10,
+                            'L': 50,
+                            'C': 100,
+                            'D': 500,
+                            'M': 1000
+                        }
+
+        number = 0
+
+        for i, char in enumerate(s):
+            number += mapping_table[char]
+            if i and (mapping_table[char] > mapping_table[s[i-1]]):
+                      number -= 2 * mapping_table[s[i-1]]
+
+        return number
+
 if __name__ == "__main__":
     assert Solution().romanToInt("XII") == 12
     assert Solution().romanToInt("XXI") == 21
-    assert Solution().romanToInt("XCIX") == 99
+    assert Solution().romanToInt2("XCIX") == 99
+    assert Solution().romanToInt2("LVIII") == 58

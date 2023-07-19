@@ -17,7 +17,9 @@ class Solution:
         res = 0
         while x !=0:
             res = res * 10 + x % 10
+            # print("res=",res)
             x //=10
+            # print("x=",x)
         if res > 0xffffffFF//2 or res < -0xffffffFF//2 :
             return 0
         return res
