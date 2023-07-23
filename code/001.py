@@ -25,7 +25,7 @@ class Solution(object):
                 break
             else:
                 # dict 01
-                num_idx_dict[v] = i  # 取到则返回，没有则添加
+                num_idx_dict[v] = i  
         return solution
 
 assert Solution().twoSum([2, 17, 7, 15], 9) == [0,2]
